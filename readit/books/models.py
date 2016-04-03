@@ -16,7 +16,7 @@ class Book(models.Model):
     def list_authors(self):
         return ", ".join([author.name for author in self.authors.all()])
 
-    # override the default save() method
+    # override the default save() method (not called on bulk operations)
     def save(self, *args, **kwargs):
         if (self.review and self.date_reviewed is None):
             self.date_reviewed = now()
