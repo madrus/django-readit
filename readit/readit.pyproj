@@ -45,8 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books\templates\authors.html" />
+    <Content Include="books\templates\author.html" />
+    <Content Include="books\templates\book-detail.html" />
     <Content Include="books\templates\book.html" />
     <Content Include="books\templates\list.html" />
+    <Content Include="readit\templates\base.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +57,7 @@
     <Folder Include="books\migrations\" />
     <Folder Include="books\templates\" />
     <Folder Include="readit\" />
+    <Folder Include="readit\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
