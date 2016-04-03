@@ -8,3 +8,6 @@ class Book(models.Model):
     review = models.TextField(blank=True, null=True)
     date_reviewed = models.DateTimeField(blank=True, null=True)
     is_favourite = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title

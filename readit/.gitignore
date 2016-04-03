@@ -105,3 +105,6 @@ coverage.xml
 # Django stuff:
 *.log
 *.pot
+
+# My custom stuff
+static/
