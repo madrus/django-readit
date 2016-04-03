@@ -44,6 +44,7 @@
     <Compile Include="readit\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="books\templates\autors.html" />
     <Content Include="books\templates\index.html" />
     <Content Include="books\templates\list.html" />
     <Content Include="requirements.txt" />
