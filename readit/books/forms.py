@@ -24,7 +24,7 @@ class ReviewForm(forms.Form):
 class BookForm(forms.ModelForm):
     class Meta:
         model = Book
-        fields = ['title', 'authors']
+        fields = ['title', 'authors', 'reviewed_by']
 
     def clean(self):
         # Super the clean method to maintain main validation and error messages
@@ -42,5 +42,6 @@ class BookForm(forms.ModelForm):
                 code='bookexists'
             )
 
+        # raise this exception if the error is that the book does not exist
         except Book.DoesNotExist:
             return self.cleaned_data
