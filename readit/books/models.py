@@ -22,7 +22,7 @@ class Book(models.Model):
         if (self.review and self.date_reviewed is None):
             self.date_reviewed = now()
 
-        # base (super) class save method
+        # override (=super) base class save method
         super(Book, self).save(*args, **kwargs)
 
 class Author(models.Model):
