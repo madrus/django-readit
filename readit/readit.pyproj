@@ -32,6 +32,9 @@
   <ItemGroup>
     <Compile Include="books\admin.py" />
     <Compile Include="books\apps.py" />
+    <Compile Include="books\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="books\migrations\__init__.py" />
     <Compile Include="books\models.py" />
     <Compile Include="books\tests.py" />
@@ -48,7 +51,10 @@
     <Content Include="books\templates\author.html" />
     <Content Include="books\templates\book-detail.html" />
     <Content Include="books\templates\book.html" />
+    <Content Include="books\templates\form-snippets.html" />
+    <Content Include="books\templates\list-to-review.html" />
     <Content Include="books\templates\list.html" />
+    <Content Include="books\templates\review-book.html" />
     <Content Include="readit\static\admin\css\base.css" />
     <Content Include="readit\static\admin\css\changelists.css" />
     <Content Include="readit\static\admin\css\dashboard.css" />
