@@ -129,3 +129,6 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+# Auth
+LOGIN_URL = '/login/'
