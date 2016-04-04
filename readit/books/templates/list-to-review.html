@@ -73,7 +73,7 @@
 
 	    <p>Can't find the author you're looking for? <a href="{% url 'add-author' %}">Create a New Author</a></p>
 
-        <label>{{ Assigned To }}</label>
+        <label>Assigned To</label>
 	    {{ form.reviewed_by }}
 	    {% if form.reviewed_by.errors %}
 		    <div class="form-error">
