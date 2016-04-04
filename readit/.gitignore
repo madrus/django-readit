@@ -102,8 +102,12 @@ coverage.xml
 # Rope
 .ropeproject
 
-# Django stuff:
+# Django
 *.log
 *.pot
 
-# My custom stuff
+# Custom
+.*
+!/.gitignore
+media
+local_settings.py

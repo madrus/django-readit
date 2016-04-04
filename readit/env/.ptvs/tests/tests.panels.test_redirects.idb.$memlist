@@ -1,9 +1,0 @@
-override_settings
-RedirectsPanelTestCase
-absolute_import
-unicode_literals
-unittest
-BaseTestCase
-HttpResponse
-django
-settings

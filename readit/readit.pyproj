@@ -32,12 +32,16 @@
   <ItemGroup>
     <Compile Include="books\admin.py" />
     <Compile Include="books\apps.py" />
+    <Compile Include="books\factories.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="books\forms.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="books\migrations\__init__.py" />
     <Compile Include="books\models.py" />
-    <Compile Include="books\tests.py" />
+    <Compile Include="books\tests\tests.py" />
+    <Compile Include="books\tests\__init__.py" />
     <Compile Include="books\views.py" />
     <Compile Include="books\__init__.py" />
     <Compile Include="manage.py" />
@@ -55,6 +59,7 @@
     <Content Include="books\templates\form-snippets.html" />
     <Content Include="books\templates\list-to-review.html" />
     <Content Include="books\templates\list.html" />
+    <Content Include="readit\templates\login.html" />
     <Content Include="books\templates\review-book.html" />
     <Content Include="readit\static\admin\css\base.css" />
     <Content Include="readit\static\admin\css\changelists.css" />
@@ -138,6 +143,7 @@
   <ItemGroup>
     <Folder Include="books\" />
     <Folder Include="books\migrations\" />
+    <Folder Include="books\tests\" />
     <Folder Include="books\templates\" />
     <Folder Include="readit\" />
     <Folder Include="readit\static\" />

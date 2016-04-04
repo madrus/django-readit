@@ -1,8 +1,0 @@
-test_staticfiles
-test_redirects
-test_sql
-test_request
-test_profiling
-test_template
-test_cache
-test_logging

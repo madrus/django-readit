@@ -1,8 +1,0 @@
-TimerPanel
-Panel
-absolute_import
-unicode_literals
-_
-render_to_string
-resource
-time

@@ -1,9 +1,0 @@
-render_to_response
-absolute_import
-unicode_literals
-sql_select
-csrf_exempt
-SQLSelectForm
-sql_profile
-sql_explain
-HttpResponseBadRequest
