@@ -2,7 +2,7 @@
 
 {% block content %}
 	<h1>Books pending review</h1>
-	
+
 	{% if books %}
 		<table>
 			<thead>
@@ -24,5 +24,12 @@
 		</table>
 	{% else %}
 		<p>There are no books waiting to be reviewed.  Good job!</p>
-	{% endif %}
+    {% endif %}
+
+    <h2>Request a new review</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Book"/>
+    </form>
 {% endblock %}

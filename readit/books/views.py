@@ -1,7 +1,7 @@
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import DetailView, View
-from .forms import ReviewForm
+from .forms import BookForm, ReviewForm
 from .models import Author, Book
 
 # Create your views here.
@@ -22,7 +22,7 @@ def list_books(request):
 class AuthorList(View):
     def get(self, request):
 
-        # authors = Author.objects.all() # also shows authors with no books
+        # authors = Author.objects.all() # this one also shows authors with no books
         authors = Author.objects.annotate(
             published_books=Count('books')
         ).filter(
@@ -43,18 +43,34 @@ class AuthorDetail(DetailView):
     model = Author
     template_name = "author.html"
 
-def review_books(request):
-	"""
-	List all of the books that we want to review
-	"""
-	books = Book.objects.filter(date_reviewed__isnull=True).prefetch_related('authors')
+class ReviewList(View):
+    """
+    List all of the books that we want to review
+    """
+    def get(self, request):
+        books = Book.objects.filter(date_reviewed__isnull=True).prefetch_related('authors')
 
-	context = {
-		'books': books,
-	}
+        context = {
+		    'books': books,
+            'form': BookForm,
+	    }
 
-	return render(request, "list-to-review.html", context)
+        return render(request, "list-to-review.html", context)
 
+    def post(self, request):
+        books = Book.objects.filter(date_reviewed__isnull=True).prefetch_related('authors')
+        form = BookForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('review-books')
+
+        context = {
+            'books': books,
+            'form': form,
+        }
+
+        return render(request, "list-to-review.html", context)
 
 def review_book(request, pk):
     """
