@@ -4,7 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>readit</Name>
     <RootNamespace>readit</RootNamespace>
-    <InterpreterId>{5a2b29b3-0c0d-4a5e-8bab-98e3c86fff04}</InterpreterId>
+    <InterpreterId>{86781f75-15a7-4a59-b350-f0c724e868f2}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -12,7 +12,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e9165c32-a644-415c-8dd8-2a596a0cd230</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <!-- <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids> -->
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <StartupFile>manage.py</StartupFile>
     <SearchPath>
     </SearchPath>
@@ -173,7 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
-      <Id>{5a2b29b3-0c0d-4a5e-8bab-98e3c86fff04}</Id>
+      <Id>{86781f75-15a7-4a59-b350-f0c724e868f2}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>3.5</Version>
       <Description>env (Python 3.5)</Description>
