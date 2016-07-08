@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Author, Book
 
+
 @admin.register(Book) # register decorator
 class BookAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -21,6 +22,7 @@ class BookAdmin(admin.ModelAdmin):
     list_display_links = ("title", "date_reviewed", ) # sort columns
     list_filter = ("is_favourite", ) # selection filter
     search_fields = ("title", "authors__name", ) # extra selection filter
+
 
 # Register your models here.
 admin.site.register(Author)

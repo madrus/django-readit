@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 from .models import Author, Book
 
+
 class AuthorFactory(factory.django.DjangoModelFactory):
     """
     Creates an author
@@ -12,6 +13,7 @@ class AuthorFactory(factory.django.DjangoModelFactory):
         model = Author
 
     name = factory.Faker('name') # from faker.providers.person
+
 
 class UserFactory(factory.django.DjangoModelFactory):
     """
@@ -24,6 +26,7 @@ class UserFactory(factory.django.DjangoModelFactory):
     last_name = factory.Faker('last_name')
     username = first_name
     password = make_password('test')
+
 
 class BookFactory(factory.django.DjangoModelFactory):
     """
@@ -41,6 +44,7 @@ class BookFactory(factory.django.DjangoModelFactory):
         if extracted:
             for authors in extracted:
                 self.authors.add(authors)
+
 
 class ReviewFactory(BookFactory):
     """

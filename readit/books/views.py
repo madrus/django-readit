@@ -7,7 +7,7 @@ from django.views.generic.edit import CreateView
 from .forms import BookForm, ReviewForm
 from .models import Author, Book
 
-# Create your views here.
+
 def list_books(request):
     """
     List the books that have reviews
@@ -21,6 +21,7 @@ def list_books(request):
     }
 
     return render(request, "list.html", context)
+
 
 class AuthorList(View):
     def get(self, request):
@@ -38,13 +39,16 @@ class AuthorList(View):
 
         return render(request, "authors.html", context)
 
+
 class BookDetail(DetailView):
     model = Book
     template_name = "book.html"
 
+
 class AuthorDetail(DetailView):
     model = Author
     template_name = "author.html"
+
 
 class ReviewList(View):
     """
@@ -60,6 +64,7 @@ class ReviewList(View):
 
         return render(request, "list-to-review.html", context)
 
+
     def post(self, request):
         books = Book.objects.filter(date_reviewed__isnull=True).prefetch_related('authors')
         form = BookForm(request.POST)
@@ -74,6 +79,7 @@ class ReviewList(View):
         }
 
         return render(request, "list-to-review.html", context)
+
 
 @login_required
 def review_book(request, pk):
@@ -103,6 +109,7 @@ def review_book(request, pk):
 	}
 
     return render(request, "review-book.html", context)
+
 
 class CreateAuthor(CreateView):
     model = Author
